@@ -160,41 +160,48 @@ class _MyHomePageState extends State<Destinos> {
                                           Padding(
                                             padding: const EdgeInsets.fromLTRB(
                                                 0, 15, 0, 0),
-                                            child: CircleAvatar(
-                                              radius: 20,
-                                              backgroundImage:
-                                                  AssetImage(imagen),
+                                            child: Hero(
+                                              tag: nombre,
+                                              child: CircleAvatar(
+                                                radius: 20,
+                                                backgroundImage:
+                                                    AssetImage(imagen),
+                                              ),
                                             ),
                                           ),
-                                          Container(
-                                            width: 270,
-                                            height: 70,
-                                            padding: const EdgeInsets.fromLTRB(
-                                                10, 0, 10, 0),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  nombre,
-                                                  style: TextStyle(
-                                                    fontFamily: 'Poppins',
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 13,
-                                                    color: miColor1,
+                                          Expanded(
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      10, 0, 10, 0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    nombre,
+                                                    style: TextStyle(
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 13,
+                                                      color: miColor1,
+                                                    ),
                                                   ),
-                                                ),
-                                                Text(
-                                                  '${texto.substring(0, 100)}...',
-                                                  textAlign: TextAlign.justify,
-                                                  style: TextStyle(
-                                                    fontFamily: 'Poppins',
-                                                    fontWeight: FontWeight.w300,
-                                                    fontSize: 12,
-                                                    color: miColor1,
+                                                  Text(
+                                                    '${texto.substring(0, 100)}...',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: TextStyle(
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      fontSize: 12,
+                                                      color: miColor1,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],
