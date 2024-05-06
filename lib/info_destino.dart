@@ -41,10 +41,12 @@ class DetalleDestino extends StatelessWidget {
                   child: SizedBox(
                     width: double.infinity,
                     height: 200,
-                    child: Image.asset(
-                      item.imagen,
-                      fit: BoxFit.cover,
-                    ),
+                    child: Hero(
+                        tag: item.nombre,
+                        child: Image.asset(
+                          item.imagen,
+                          fit: BoxFit.cover,
+                        )),
                   ),
                 ),
                 const Divider(
